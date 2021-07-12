@@ -9,7 +9,7 @@
     <!-- <button class="form-control btn btn-danger" (click)="_toggleSidebar()">X</button> -->
     <ul class="sidebar-menu">
       <span class="hover-primary">
-        <li class="active">
+        <li routerLink='/home' routerLinkActive="active">
           <i class="material-icons-outlined"> home </i> Home
         </li>
       </span>
@@ -43,13 +43,13 @@
         </span>
         <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed1">
           <ul>
-            <li>
+            <li routerLink='/admin/usuarios' routerLinkActive="active">
               <span class="hover-primary"> Usuarios </span>
             </li>
-            <li>
+            <li routerLink='/admin/roles' routerLinkActive="active">
               <span class="hover-primary"> Roles </span>
             </li>
-            <li>
+            <li routerLink='/admin/permisos' routerLinkActive="active">
               <span class="hover-primary"> Permisos </span>
             </li>
           </ul>
@@ -71,13 +71,8 @@
   <!-- Page content -->
   <div ng-sidebar-content>
     <div class="container-fluid pl-5 pr-5 mt-5">
-      <h2>Analytics</h2>
-      <div class="row agm-box">
-        <div class="col-3 border">TRESS</div>
-        <div class="col-6 border">SEISS</div>
-        <div class="col-2 border">DOSS</div>
-        <div class="col-1 border">UNOOO</div>
-      </div>
+      <!-- RUTAS DEL CONTENIDO -->
+      <router-outlet></router-outlet>
     </div>
 
     <!-- footer -->

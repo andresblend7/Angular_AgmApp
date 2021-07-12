@@ -8,6 +8,7 @@ import { Component, OnInit, Output } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  userFullName='Agm Developer'
 
   public isMenuCollapsed = true;
   constructor(private sidebarService: SidebarService) {}

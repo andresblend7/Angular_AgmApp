@@ -22,6 +22,9 @@ ul.sidebar-menu {
     i.icon-expand {
       float: right;
     }
+    &:focus{
+      outline: 0;
+    }
   }
 
   ul li {

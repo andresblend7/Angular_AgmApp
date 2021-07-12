@@ -12,3 +12,28 @@ span.brand-tittle {
   vertical-align: middle;
   font-weight: 500;
 }
+
+i.material-icons {
+  vertical-align: -8px;
+}
+
+.user-account {
+  float: right;
+}
+
+.blink-bell {
+  font-size: 28px;
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+  15% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0;
+  }
+}

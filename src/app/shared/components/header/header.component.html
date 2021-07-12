@@ -1,8 +1,36 @@
 <nav class="nav-agm agm-box">
-  <a class="btn btn-default btn-toggle-sidebar" (click)="toggleSidebar()">
-    &#9776;
+  <a
+    class="btn btn-default btn-toggle-sidebar hover-primary"
+    (click)="toggleSidebar()"
+  >
+    <i class="material-icons"> view_headline </i>
   </a>
-  <span class="brand-tittle text-primary">
-    AGM-Develop
-  </span>
+  <span class="brand-tittle text-primary"> AGM-Develop </span>
+
+  <div class="user-account">
+    <i class="material-icons blink-bell text-primary hover-primary pr-2">
+      notifications
+    </i>
+
+    <div class="d-inline">
+      <img
+        src="https://i.pravatar.cc/300"
+        class="avatar rounded-circle pr-2"
+        width="44"
+        alt=""
+      />
+
+      <div ngbDropdown class="d-inline-block">
+        <span id="dropdownBasic1" class="hover-primary" ngbDropdownToggle> {{ userFullName }} </span>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem>Perfil</button>
+          <button ngbDropdownItem>Configuración</button>
+          <button ngbDropdownItem>Cerrar Sesión</button>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
 </nav>
