@@ -1,0 +1,43 @@
+ul.sidebar-menu {
+  max-width: 230px;
+  list-style-type: none;
+  min-width: 230px;
+  padding-left: 1rem;
+  vertical-align: middle;
+  i {
+    vertical-align: -6px; /*Change this to adjust the icon*/
+  }
+
+  li:first-child {
+    padding-top: 2.5rem;
+  }
+  li {
+    font-size: 15px;
+    padding-left: 0.3rem;
+    padding-bottom: 1.5rem;
+
+    i {
+      padding-right: 0.6rem;
+    }
+    i.icon-expand {
+      float: right;
+    }
+  }
+
+  ul li {
+    font-size: 13px;
+    padding-top: 0.25rem;
+    padding-bottom: 0.255rem;
+    list-style-type: none;
+  }
+}
+
+.sidebar-footer , .sidebar-footer i{
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+  font-size: 12px;
+  color: gray;
+  position: absolute;
+  bottom: 0;
+}
