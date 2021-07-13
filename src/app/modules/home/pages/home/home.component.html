@@ -28,13 +28,37 @@
       </li>
     </p>
   </div>
-  <div *ngIf="alertExist" class="col-12 pl-4 pb-2 pr-4">
-    <ngb-alert class="lol"  type="success" (close)="close()" >
+
+  <div *ngIf="showAlerts" class="col-12 pl-4 pb-2 pr-4">
+    <ngb-alert class="alert-agm alert-agm-success"  type="success" (close)="close()"  [dismissible]="false">
       <b>
         Notificación
       </b>
-      <p class="mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis eaque sed harum quod nisi iste iure aspernatur fugit officiis libero consequuntur, ab provident, vel neque animi beatae numquam at vitae.</p>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis eaque sed harum quod nisi iste iure aspernatur fugit officiis libero consequuntur, ab provident, vel neque animi beatae numquam at vitae.</p>
     </ngb-alert>
+
+    <ngb-alert class="alert-agm alert-agm-danger"  type="danger" (close)="close()"  [dismissible]="false">
+      <b>
+        ¡Atención!
+      </b>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis eaque sed harum quod nisi iste iure aspernatur fugit officiis libero consequuntur, ab provident, vel neque animi beatae numquam at vitae.</p>
+    </ngb-alert>
+
+    <ngb-alert class="alert-agm alert-agm-warning"  type="warning" (close)="close()"  [dismissible]="false">
+      <b>
+        Recuerda
+      </b>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis eaque sed harum quod nisi iste iure aspernatur fugit officiis libero consequuntur, ab provident, vel neque animi beatae numquam at vitae.</p>
+    </ngb-alert>
+
+    <ngb-alert class="alert-agm alert-agm-primary"  type="primary" (close)="close()"  [dismissible]="false">
+      <b>
+        Información
+      </b>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis eaque sed harum quod nisi iste iure aspernatur fugit officiis libero consequuntur, ab provident, vel neque animi beatae numquam at vitae.</p>
+    </ngb-alert>
+
+
     <button class="btn btn-primary">
       Andrés
     </button>

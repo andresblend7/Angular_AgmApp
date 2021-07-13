@@ -6,13 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  alertExist = true;
+  showAlerts = false;
   constructor() { }
 
   ngOnInit(): void {
   }
   close() {
-    this.alertExist = false;
+    this.showAlerts = false;
   }
 
 }
