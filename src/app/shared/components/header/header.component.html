@@ -8,28 +8,26 @@
   <span class="brand-tittle text-primary"> AGM-Develop </span>
 
   <div class="user-account">
-    <i class="material-icons blink-bell text-primary hover-primary pr-2">
+    <i class=" d-none d-sm-inline d-xl-inline d-lg-inline d-md-inline  material-icons blink-bell text-primary hover-primary pr-2">
       notifications
     </i>
 
+    <div ngbDropdown class="d-inline-block">
     <div class="d-inline">
       <img
+        ngbDropdownToggle
         src="https://i.pravatar.cc/300"
         class="avatar rounded-circle pr-2"
         width="44"
         alt=""
       />
-
-      <div ngbDropdown class="d-inline-block">
-        <span id="dropdownBasic1" class="hover-primary" ngbDropdownToggle> {{ userFullName }} </span>
+        <span  id="dropdownBasic1" class="d-none d-sm-inline d-xl-inline d-lg-inline d-md-inline hover-primary" ngbDropdownToggle> {{ userFullName }} </span>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
           <button ngbDropdownItem>Perfil</button>
           <button ngbDropdownItem>Configuración</button>
           <button ngbDropdownItem>Cerrar Sesión</button>
         </div>
       </div>
-
-
 
     </div>
   </div>
