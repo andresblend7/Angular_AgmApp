@@ -28,8 +28,9 @@
       </li>
     </p>
   </div>
+
   <div *ngIf="alertExist" class="col-12 pl-4 pb-2 pr-4">
-    <ngb-alert class="lol"  type="success" (close)="close()" >
+    <ngb-alert class="lol"  type="success" (close)="close()"  [dismissible]="false">
       <b>
         Notificación
       </b>
@@ -38,6 +39,10 @@
     <button class="btn btn-primary">
       Andrés
     </button>
+    <hr>
+    <span class="bg-success">HOLAAAA</span>
+    <hr>
+    <span class="text-success">XXXXXXXXX</span>
   </div>
 
 </div>
