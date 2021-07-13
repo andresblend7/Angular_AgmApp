@@ -28,4 +28,16 @@
       </li>
     </p>
   </div>
+  <div *ngIf="alertExist" class="col-12 pl-4 pb-2 pr-4">
+    <ngb-alert class="lol"  type="success" (close)="close()" >
+      <b>
+        Notificación
+      </b>
+      <p class="mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis eaque sed harum quod nisi iste iure aspernatur fugit officiis libero consequuntur, ab provident, vel neque animi beatae numquam at vitae.</p>
+    </ngb-alert>
+    <button class="btn btn-primary">
+      Andrés
+    </button>
+  </div>
+
 </div>

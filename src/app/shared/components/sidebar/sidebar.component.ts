@@ -26,6 +26,9 @@ export class SidebarComponent implements OnInit {
     this.sidebarService.toggleSidebarEvent.subscribe((change) => {
       this._toggleSidebar();
     });
+
+    if(window.innerWidth<this.minWithDock)
+    this._opened= false;
   }
 
   setMode(mode: number): void {

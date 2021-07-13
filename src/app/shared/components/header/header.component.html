@@ -33,11 +33,11 @@
       >7</span
     >
 
-    <div ngbDropdown class="d-inline-block">
+    <div ngbDropdown class="d-inline-block"  #myDrop="ngbDropdown">
       <div class="d-inline">
-        <img
-          ngbDropdownToggle
-          src="https://i.pravatar.cc/300"
+        <img (click)="$event.stopPropagation(); myDrop.open();"
+         aria-labelledby="dropdownBasic1"
+          src="../../../../assets/images/avatar.png"
           class="avatar rounded-circle cursor-p"
           width="40"
           alt=""
