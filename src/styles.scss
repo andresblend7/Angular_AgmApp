@@ -43,6 +43,42 @@ body {
   box-shadow: 0 1px 13px 0px rgb(0 0 0 / 10%);
 }
 
+.alert-agm {
+  padding: 1rem;
+  border-left-width: 0.15rem;
+  border-left-style: solid;
+  margin: 1rem 0;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.alert-agm-success {
+  background-color: rgba(70, 201, 58, 0.096);
+  border-color: $greenBorders;
+  color: #2e825c;
+}
+
+.alert-agm-danger {
+  background-color: rgba(255, 71, 87, 0.096);
+  border-color: $redBorders;
+  color: $redColor;
+}
+
+.alert-agm-primary {
+  background-color: rgba(58, 180, 201, 0.096);
+  border-color: $primaryBorder;
+  color: $primaryColor;
+}
+
+.alert-agm-warning {
+  background-color: rgba(255,186,0,.096);
+  border-color: $warnBorders;
+  color: $warnColor;
+}
 .cursor-p {
   cursor: pointer;
 }
@@ -53,7 +89,7 @@ h4.agm-page-tittle {
   padding-bottom: 1rem;
   padding-left: 0;
 }
-p{
+p {
   font-size: 0.9rem;
 }
 
