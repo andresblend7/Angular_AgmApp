@@ -3,50 +3,78 @@
 /* Importing Bootstrap SCSS file. */
 
 $primaryColor: #17bfc5;
-$theme-colors: (primary: $primaryColor);
+$theme-colors: (
+  primary: $primaryColor,
+);
 @import "~bootstrap/scss/bootstrap";
 
-$primary: #17bfc5;
-
 body {
-
   height: 100vh;
   background-color: #ecf0fa;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-.active{
-  color:$primary
+.active {
+  color: $primary;
 }
 
-.hover-primary:hover{
-  color:$primary;
+.hover-primary:hover {
+  color: $primaryColor;
   cursor: pointer;
 }
 
 .ng-sidebar {
   background-color: #fff;
-  box-shadow: 1px -1px 2px 0 #0000000d, -2px -2px 0px 0px #cccccc82, -1px 6px 5px 0px #ffffff00;
+  box-shadow: 1px -1px 2px 0 #0000000d, -2px -2px 0px 0px #cccccc82,
+    -1px 6px 5px 0px #ffffff00;
   //background-color: red;
   // margin-top: 35px;
 }
 
-.ng-sidebar--closed{
-  i{
+.ng-sidebar--closed {
+  i {
     float: right;
   }
 }
 
 .agm-box {
-  border-radius: 10px;
+  border-radius: 0.3rem;
   background-color: #fff;
-  // -webkit-box-shadow: 0px 0px 2px 2px rgb(152 158 175 / 30%);
-  // box-shadow: 0px 0px 2px 2px rgba(152, 158, 175, 0.30);
-  // box-shadow: 1px -1px 14px 0 #00000017, -2px -2px 15px 0px #cccccc3d, 1px 8px 5px 0px #ffffff3b;
-  // box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  // box-shadow: 0 4px 25px 0 rgb(0 0 0 / 10%);
   box-shadow: 0 1px 13px 0px rgb(0 0 0 / 10%);
-  // box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.20);
 }
 
+.cursor-p {
+  cursor: pointer;
+}
 
+h4.agm-page-tittle {
+  font-weight: 500;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  padding-left: 0;
+}
+p{
+  font-size: 0.9rem;
+}
+
+// *************** BreadCrumbStyles *****************//
+
+label.xng-breadcrumb-trail {
+  margin-bottom: 0 !important;
+  font-weight: 600;
+}
+
+a.xng-breadcrumb-link:hover {
+  color: $primaryColor;
+}
+
+.xng-breadcrumb-list {
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  margin-bottom: 10px !important;
+}

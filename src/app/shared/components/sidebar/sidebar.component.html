@@ -9,7 +9,7 @@
     <!-- <button class="form-control btn btn-danger" (click)="_toggleSidebar()">X</button> -->
     <ul class="sidebar-menu">
       <span class="hover-primary">
-        <li routerLink='/home' routerLinkActive="active">
+        <li routerLink="/home" routerLinkActive="active">
           <i class="material-icons-outlined"> home </i> Home
         </li>
       </span>
@@ -43,13 +43,13 @@
         </span>
         <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed1">
           <ul>
-            <li routerLink='/admin/usuarios' routerLinkActive="active">
+            <li routerLink="/admin/usuarios" routerLinkActive="active">
               <span class="hover-primary"> Usuarios </span>
             </li>
-            <li routerLink='/admin/roles' routerLinkActive="active">
+            <li routerLink="/admin/roles" routerLinkActive="active">
               <span class="hover-primary"> Roles </span>
             </li>
-            <li routerLink='/admin/permisos' routerLinkActive="active">
+            <li routerLink="/admin/permisos" routerLinkActive="active">
               <span class="hover-primary"> Permisos </span>
             </li>
           </ul>
@@ -70,18 +70,20 @@
 
   <!-- Page content -->
   <div ng-sidebar-content>
-    <div class="container-fluid pl-5 pr-5 mt-5">
+    <div class="container-fluid pl-5 pr-5 mt-3">
+
+      <!-- BREADCRUMBS -->
+      <app-breadcrumb></app-breadcrumb>
+
       <!-- RUTAS DEL CONTENIDO -->
       <router-outlet></router-outlet>
     </div>
 
     <!-- footer -->
     <div class="container-fluid">
-      <div class="row agm-box w-75 " style="position: absolute; bottom: 0">
-        <footer class="" >
-          GOLAAASDAS
-        </footer>
-       </div>
+      <div class="row agm-box w-75" style="position: absolute; bottom: 0">
+        <footer class="">GOLAAASDAS</footer>
+      </div>
     </div>
   </div>
 </ng-sidebar-container>

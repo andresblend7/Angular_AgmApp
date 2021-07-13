@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 
 const routes:Routes = [
   {
-    path:'', component: HomeComponent
+    path:'', component: HomeComponent, data:{breadcrumb:'Home'}
 
   }
 ];

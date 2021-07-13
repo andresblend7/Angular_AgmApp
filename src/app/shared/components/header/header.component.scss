@@ -37,3 +37,16 @@ i.material-icons {
     opacity: 0;
   }
 }
+
+button.btn-notifications {
+  font-size: 18px;
+  padding-right: 0;
+}
+
+.badge-notify{
+  position: relative;
+  top: -10px;
+  left: -18px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
