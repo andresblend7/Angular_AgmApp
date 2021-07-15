@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "agm_custom";
 
 /* Importing Bootstrap SCSS file. */
 @import "agmVariables.scss";
@@ -6,6 +7,7 @@
 $theme-colors: (
   primary: $primaryColor,
 );
+
 @import "~bootstrap/scss/bootstrap";
 
 body {
@@ -15,7 +17,7 @@ body {
 }
 
 .active {
-  color: $primary;
+  color: $primary !important;
 }
 
 .hover-primary:hover {
@@ -29,6 +31,10 @@ body {
     -1px 6px 5px 0px #ffffff00;
   //background-color: red;
   // margin-top: 35px;
+}
+
+aside.ng-sidebar {
+  z-index: 10 !important;
 }
 
 .ng-sidebar--closed {
@@ -93,6 +99,11 @@ p {
   font-size: 0.9rem;
 }
 
+h5.agm-page-section-titlle {
+  font-weight: 500;
+  margin-top: 1.2rem;
+  padding-bottom: 1rem;
+}
 // *************** BreadCrumbStyles *****************//
 
 label.xng-breadcrumb-trail {
