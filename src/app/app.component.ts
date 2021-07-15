@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'AgmApp';
 public isCollapsed = false;
+
+active = 1;
+
+toggleMenu() {
+  this.isCollapsed = !this.isCollapsed;
+}
+
+
 }

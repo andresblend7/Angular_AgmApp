@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import "agm_custom";
 
 /* Importing Bootstrap SCSS file. */
 
-$primaryColor: #17bfc5;
 $theme-colors: (
   primary: $primaryColor,
 );
@@ -32,10 +32,9 @@ body {
   // margin-top: 35px;
 }
 
-aside.ng-sidebar{
+aside.ng-sidebar {
   z-index: 10 !important;
 }
-
 
 .ng-sidebar--closed {
   i {
@@ -59,11 +58,11 @@ h4.agm-page-tittle {
   padding-bottom: 1rem;
   padding-left: 0;
 }
-p{
+p {
   font-size: 0.9rem;
 }
 
-h5.agm-page-section-titlle{
+h5.agm-page-section-titlle {
   font-weight: 500;
   margin-top: 1.2rem;
   padding-bottom: 1rem;

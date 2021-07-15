@@ -1,0 +1,23 @@
+@import "agm_custom";
+a{
+  color:black;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  color: #495057;
+  background-color: #fff;
+  border-color: transparent;
+  border-bottom: 1px solid $primaryBorder;
+  /* border-color: #dee2e6 #dee2e6 #fff; */
+
+  &:hover, :focus{
+    border-color: transparent;
+    border-bottom: 1px solid $primaryBorder;
+    font-weight: 500;
+  }
+}
+
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+  border-color: transparent;
+  border-bottom: 1px solid $primaryBorder;
+}
