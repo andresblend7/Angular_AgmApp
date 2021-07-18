@@ -1,11 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import "agm_custom";
 
-/* Importing Bootstrap SCSS file. */
-@import "agmVariables.scss";
-
 $theme-colors: (
   primary: $primaryColor,
+  success: $succesBackGround
 );
 
 @import "~bootstrap/scss/bootstrap";
@@ -16,7 +14,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.active {
+span.active,
+i.active,
+a.active,
+p.active {
   color: $primary !important;
 }
 
@@ -48,6 +49,31 @@ aside.ng-sidebar {
   background-color: #fff;
   box-shadow: 0 1px 13px 0px rgb(0 0 0 / 10%);
 }
+
+//************ BUTTONS ***********//
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.btn{
+  border-radius: 00.3rem;
+
+}
+
+.btn-success {
+  color: #fff;
+  border-color: $succesBackGround;
+  // &:focus {
+  //   background-color: $succesBackGround;
+  //   border-color: transparent;
+  //   box-shadow: none;
+  // }
+}
+
+//------------------- ALERTS ---------------------//
 
 .alert-agm {
   padding: 1rem;
@@ -81,7 +107,7 @@ aside.ng-sidebar {
 }
 
 .alert-agm-warning {
-  background-color: rgba(255,186,0,.096);
+  background-color: rgba(255, 186, 0, 0.096);
   border-color: $warnBorders;
   color: $warnColor;
 }
@@ -124,4 +150,95 @@ a.xng-breadcrumb-link:hover {
   padding: 0;
   font-size: 13px;
   margin-bottom: 10px !important;
+}
+
+// **************** TOAST ******************** //
+.toast {
+  border-radius: 0.3rem;
+  font-weight: 600 !important;
+  border-left-width: 0.22rem;
+  border-left-style: solid;
+}
+
+ngb-toast.toast.bg-success-light {
+  // background-color: #3bca2e  !important;
+  background-color: white !important;
+  color: black !important;
+  border-color: $greenBorders !important;
+  i {
+    color: $greenBorders !important;
+  }
+}
+
+
+ngb-toast.toast.bg-danger-light {
+  // background-color: #3bca2e  !important;
+  background-color: white !important;
+  color: black !important;
+  border-color: $redBorders !important;
+  i {
+    color: $redBorders !important;
+  }
+}
+
+ngb-toast.toast.bg-primary-light {
+  // background-color: #3bca2e  !important;
+  background-color: white !important;
+  color: black !important;
+  border-color: $primaryBorder !important;
+  i {
+    color: $primaryBorder !important;
+  }
+}
+
+ngb-toast.toast.bg-warning-light {
+  // background-color: #3bca2e  !important;
+  background-color: white !important;
+  color: black !important;
+  border-color: $warnBorders !important;
+  i {
+    color: $warnBorders !important;
+  }
+}
+
+
+ngb-toast.toast.bg-success {
+  // background-color: #3bca2e  !important;
+  background-color: $greenBorders !important;
+  color: white !important;
+  border-color: $greenBorders !important;
+  i {
+    color: $white !important;
+  }
+}
+
+
+ngb-toast.toast.bg-danger {
+  // background-color: #3bca2e  !important;
+  background-color: $redBorders !important;
+  color: white !important;
+  border-color: $redBorders !important;
+  i {
+    color: white !important;
+  }
+}
+
+ngb-toast.toast.bg-primary {
+  // background-color: #3bca2e  !important;
+  background-color: $primary !important;
+  color: white !important;
+  border-color: $primary !important;
+  i {
+    color: white !important;
+  }
+}
+
+ngb-toast.toast.bg-warning {
+  // background-color: #3bca2e  !important;
+  background-color: $warnBorders !important;
+  color: white !important;
+  border-color: $warnBorders !important;
+  i {
+    color: white !important;
+  }
 }
