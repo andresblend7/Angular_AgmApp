@@ -23,8 +23,13 @@ export class SidebarComponent implements OnInit {
 
   constructor(private sidebarService: SidebarService) {
     this.widthScreen$.next(window.innerWidth);
+
     this.sidebarService.toggleSidebarEvent.subscribe((change) => {
       this._toggleSidebar();
+    });
+
+    this.sidebarService.navigationSidebarEndEvent.subscribe(()=>{
+      this.navigationByWindowSize();
     });
 
     if(window.innerWidth<this.minWithDock)
@@ -33,6 +38,12 @@ export class SidebarComponent implements OnInit {
 
   setMode(mode: number): void {
     this.modeSideBar = mode;
+  }
+
+  //Si se navegó en una resolución pequeña se cierra el menú
+  navigationByWindowSize(){
+    if(window.innerWidth<this.minWithDock)
+    this._opened= false;
   }
 
   ngOnInit(): void {

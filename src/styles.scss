@@ -3,7 +3,7 @@
 
 $theme-colors: (
   primary: $primaryColor,
-  success: $succesBackGround
+  success: $succesBackGround,
 );
 
 @import "~bootstrap/scss/bootstrap";
@@ -12,6 +12,7 @@ body {
   height: 100vh;
   background-color: #ecf0fa;
   font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 span.active,
@@ -58,9 +59,8 @@ aside.ng-sidebar {
   }
 }
 
-.btn{
+.btn {
   border-radius: 00.3rem;
-
 }
 
 .btn-success {
@@ -125,6 +125,12 @@ p {
   font-size: 0.9rem;
 }
 
+@media only screen and (max-width: 800px) {
+  p {
+    font-size: 0.8rem;
+  }
+}
+
 h5.agm-page-section-titlle {
   font-weight: 500;
   margin-top: 1.2rem;
@@ -170,7 +176,6 @@ ngb-toast.toast.bg-success-light {
   }
 }
 
-
 ngb-toast.toast.bg-danger-light {
   // background-color: #3bca2e  !important;
   background-color: white !important;
@@ -201,7 +206,6 @@ ngb-toast.toast.bg-warning-light {
   }
 }
 
-
 ngb-toast.toast.bg-success {
   // background-color: #3bca2e  !important;
   background-color: $greenBorders !important;
@@ -211,7 +215,6 @@ ngb-toast.toast.bg-success {
     color: $white !important;
   }
 }
-
 
 ngb-toast.toast.bg-danger {
   // background-color: #3bca2e  !important;
@@ -240,5 +243,40 @@ ngb-toast.toast.bg-warning {
   border-color: $warnBorders !important;
   i {
     color: white !important;
+  }
+}
+
+//******** MODAL *********//
+/* ANIMACIÖN */
+.modal-content {
+  border-radius: 0.6rem;
+}
+
+.agm-modal-backdrop {
+  background-color: #7f8b8e;
+  opacity: 0.85;
+}
+.modal-dialog {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+.modal-holder {
+  animation-name: example;
+  animation-duration: 0.2s;
+}
+
+@keyframes example {
+  0% {
+    transform: scale(0.9);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }

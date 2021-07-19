@@ -4,10 +4,12 @@ import { ComponentsComponent } from './components/components.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ComponentesRoutingModule } from './componentes-routing';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
-    ComponentsComponent
+    ComponentsComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule,
