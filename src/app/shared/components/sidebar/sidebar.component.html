@@ -20,16 +20,42 @@
           <i class="material-icons-outlined"> workspaces </i> Componentes
         </span>
       </li>
+
       <li>
-        <span class="hover-primary">
-          <i class="material-icons-outlined"> integration_instructions </i> Ejercicios
+        <span
+          class="hover-primary"
+          (click)="collapse.toggle(); toggleForChilds()"
+          [attr.aria-expanded]="!isCollapsed2"
+          aria-controls="collapseExample">
+          <i class="material-icons-outlined"> integration_instructions </i>
+          Code Test
+          <i class="material-icons icon-expand">
+            {{ isCollapsed2 ? "expand_more" : "expand_less" }}
+          </i>
         </span>
+        <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed2">
+          <ul>
+            <li routerLink="/dev/directivas" routerLinkActive="active">
+              <span class="hover-primary" routerLinkActive="active"> Directivas </span>
+            </li>
+            <li routerLink="/dev/pipes" routerLinkActive="active">
+              <span class="hover-primary"> Pipes </span>
+            </li>
+            <li routerLink="/admin/permisos" routerLinkActive="active">
+              <span class="hover-primary"> Rxjs </span>
+            </li>
+          </ul>
+        </div>
       </li>
-      <li>
-        <span class="hover-primary">
+
+
+      <li >
+        <span class="hover-primary" routerLinkActive="active">
           <i class="material-icons-outlined"> sports_esports </i> Juegos
         </span>
       </li>
+
+
       <li>
         <span
           class="hover-primary"
@@ -72,13 +98,14 @@
 
   <!-- Page content -->
   <div ng-sidebar-content>
-    <div class="container-fluid pl-5 pr-5 mt-3">
+    <div class="container-fluid pl-5 pr-5 mt-3 mb-5">
 
       <!-- BREADCRUMBS -->
       <app-breadcrumb></app-breadcrumb>
 
       <!-- RUTAS DEL CONTENIDO -->
       <router-outlet></router-outlet>
+      <br><br><br>
     </div>
 
     <!-- footer -->

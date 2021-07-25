@@ -8,18 +8,21 @@ $theme-colors: (
 
 @import "~bootstrap/scss/bootstrap";
 
+//********** Global TAGS *********//
+
 body {
   height: 100vh;
   background-color: #ecf0fa;
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow-y: hidden;
 }
 
 span.active,
 i.active,
 a.active,
 p.active {
-  color: $primary !important;
+  color: $primaryColor !important;
 }
 
 .hover-primary:hover {
@@ -27,6 +30,35 @@ p.active {
   cursor: pointer;
 }
 
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+	background-color: #F5F5F5;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: 0 1px 13px 0px rgb(0 0 0 / 10%);
+  -webkit-box-shadow:0 1px 13px 0px rgb(0 0 0 / 10%);
+	background-color: #F5F5F5;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:$gray;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #70027e7c;
+}
+
+
+
+
+// ********* SIDEBAR ***********//
 .ng-sidebar {
   background-color: #fff;
   box-shadow: 1px -1px 2px 0 #0000000d, -2px -2px 0px 0px #cccccc82,
@@ -44,6 +76,7 @@ aside.ng-sidebar {
     float: right;
   }
 }
+
 
 .agm-box {
   border-radius: 0.3rem;
@@ -268,6 +301,8 @@ ngb-toast.toast.bg-warning {
   animation-name: example;
   animation-duration: 0.2s;
 }
+
+
 
 @keyframes example {
   0% {

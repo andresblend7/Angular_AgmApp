@@ -5,8 +5,7 @@ import { ComponentsComponent } from './modules/componentes/components/components
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () =>
-      import('@home/home.module').then((m) => m.HomeModule),
+    loadChildren: () => import('@home/home.module').then((m) => m.HomeModule),
     data: {
       title: 'page1',
       breadcrumb: [
@@ -18,23 +17,34 @@ const routes: Routes = [
     },
   },
   {
-   path:'componentes',
-   loadChildren: () =>
-      import('./modules/componentes/componentes.module').then((m) => m.ComponentesModule),
+    path: 'componentes',
+    loadChildren: () =>
+      import('./modules/componentes/componentes.module').then(
+        (m) => m.ComponentesModule
+      ),
   },
   {
     path: 'admin',
     loadChildren: () =>
       import('./modules/admin/admin.module').then((m) => m.AdminModule),
-      data: {
-        title: 'page1',
-        breadcrumb: [
-          {
-            label: 'Admin',
-            url: 'admin',
-          },
-        ],
-      },
+    data: {
+      title: 'page1',
+      breadcrumb: [
+        {
+          label: 'Admin',
+          url: 'admin',
+        },
+      ],
+    },
+  },
+  {
+    path: 'dev',
+    loadChildren: () =>
+      import('./modules/expodev/expodev.module').then((m) => m.ExpodevModule),
+  },
+  {
+    path: '**',
+    redirectTo: 'home',
   },
 ];
 

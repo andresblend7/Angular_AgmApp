@@ -15,6 +15,7 @@ export class SidebarComponent implements OnInit {
   _opened: boolean = true;
   activedock = true;
   isCollapsed1 = true;
+  isCollapsed2 = true;
 
   private widthScreen$ = new Subject<number>();
 

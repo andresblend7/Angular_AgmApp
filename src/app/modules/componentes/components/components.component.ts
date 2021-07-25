@@ -43,6 +43,7 @@ export class ComponentsComponent implements OnInit {
   }
 
   toastSucess(clase:string, texto:string, icon:string): void {
+
     this.toastSvc.show(
       texto,
       { classname: clase, delay: 4700, header: '', icon :icon }
