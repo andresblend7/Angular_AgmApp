@@ -7,12 +7,14 @@ import { PipesComponent } from './pipes/pipes.component';
 import { CustomPipePipe } from '@app/shared/pipes/custom-pipe.pipe';
 import { AppModule } from '@app/app.module';
 import { SharedModule } from '@app/shared/shared.module';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 
 @NgModule({
   declarations: [
     DirectivasComponent,
     PipesComponent,
+    RxjsComponent,
   ],
   imports: [
     CommonModule,

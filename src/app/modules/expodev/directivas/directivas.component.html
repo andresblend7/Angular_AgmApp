@@ -30,5 +30,25 @@
       Hello World
     </p>
   </div>
+
+  <div class="col-12 pt-4 pl-4 pb-2 pr-4">
+    <b>Ng Class Async :</b>
+    <br>
+    <code> [ngClass]="'icon-spin' : cargando" </code> <br>
+
+    <button [disabled]="cargando" (click)="asyncIconClass()"  class="btn btn-info"><i class="material-icons" [ngClass]="{'icon-spin' : cargando}">refresh</i>
+      <span *ngIf="!cargando">Async</span>
+      <span *ngIf="cargando"> Wait... </span>
+    </button>
+  </div>
+
+  <div class="col-12 pt-4 pl-4 pb-2 pr-4">
+    <b>Custom Directive:</b>
+    <br>
+    <code> appCustomDirectiva : color </code> <br>
+    <div class="p-2 mt-2" [appCustomDirectiva]="'purple'"> Border is coming </div>
+
+  </div>
+
 </div>
 

@@ -30,6 +30,7 @@ p.active {
   cursor: pointer;
 }
 
+/***** SCROLL BARR ********/
 
 /* width */
 ::-webkit-scrollbar {
@@ -55,8 +56,16 @@ p.active {
   background: #70027e7c;
 }
 
-
-
+/************ MATERIAL ICONS **************/
+.material-icons{
+  display: inherit;
+  vertical-align: top;
+}
+.icon-spin{
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
 
 // ********* SIDEBAR ***********//
 .ng-sidebar {
@@ -94,6 +103,14 @@ aside.ng-sidebar {
 
 .btn {
   border-radius: 00.3rem;
+  &:focus{
+    border: none !important;
+    box-shadow: none;
+  }
+}
+
+.btn[disabled]{
+  cursor:not-allowed;
 }
 
 .btn-success {
@@ -298,13 +315,13 @@ ngb-toast.toast.bg-warning {
 }
 
 .modal-holder {
-  animation-name: example;
+  animation-name: modalHolderOn;
   animation-duration: 0.2s;
 }
 
 
-
-@keyframes example {
+//************** ANIMACIONES *************///
+@keyframes modalHolderOn {
   0% {
     transform: scale(0.9);
   }
@@ -315,3 +332,7 @@ ngb-toast.toast.bg-warning {
     transform: scale(1);
   }
 }
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(850deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(850deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(850deg); transform:rotate(850deg); }}

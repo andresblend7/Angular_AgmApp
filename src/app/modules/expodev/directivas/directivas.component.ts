@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DirectivasComponent implements OnInit {
 
   alertClass='alert-info';
+  cargando:boolean = false;
 
   texto={
     warning:true
@@ -19,6 +20,13 @@ export class DirectivasComponent implements OnInit {
   }
   changeClass(success:boolean){
    this.alertClass = (success) ? 'alert-success' : 'alert-info';
+  }
+
+  asyncIconClass(){
+    this.cargando= true;
+    setTimeout(() => {
+      this.cargando= false;
+    }, 3500);
   }
 
 }

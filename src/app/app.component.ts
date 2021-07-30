@@ -8,6 +8,10 @@ import { NavigationStart, Router } from '@angular/router';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  objeto = {
+    nombre: 'andres'
+  }
+
   constructor(private router: Router, sidebarSvc: SidebarService) {
     this.router.events.subscribe((event: any) => {
       if (event instanceof NavigationStart) {
@@ -24,4 +28,9 @@ export class AppComponent {
   toggleMenu() {
     this.isCollapsed = !this.isCollapsed;
   }
+}
+
+export interface  Sujeto{
+  nombre:string;
+  edad: number;
 }
