@@ -12,8 +12,6 @@ import { SidebarComponent } from './shared/components/sidebar/sidebar.component'
 import { HeaderComponent } from './shared/components/header/header.component';
 import { BreadcrumbComponent } from './shared/components/breadcrumb/breadcrumb.component';
 import { ToastNotificationsComponent } from './shared/components/toast-notifications/toast-notifications.component';
-import { CustomPipePipe } from './shared/pipes/custom-pipe.pipe';
-
 
 
 

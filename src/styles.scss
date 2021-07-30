@@ -12,9 +12,9 @@ $theme-colors: (
 
 body {
   height: 100vh;
-  background-color: #ecf0fa;
-  font-family: "Poppins", sans-serif;
-  -webkit-font-smoothing: antialiased;
+  background-color: #f1f5f9;
+  font-family: 'Inter', sans-serif;
+  // -webkit-font-smoothing: antialiased;
   overflow-y: hidden;
 }
 
@@ -59,7 +59,7 @@ p.active {
 /************ MATERIAL ICONS **************/
 .material-icons{
   display: inherit;
-  vertical-align: top;
+  vertical-align:middle;
 }
 .icon-spin{
   -webkit-animation:spin 4s linear infinite;
@@ -87,10 +87,16 @@ aside.ng-sidebar {
 }
 
 
+.ag-shadow{
+  --tw-shadow: 0 1px 3px 0 #0000001a,0 1px 2px 0 #0000000f!important;
+}
+
 .agm-box {
-  border-radius: 0.3rem;
   background-color: #fff;
-  box-shadow: 0 1px 13px 0px rgb(0 0 0 / 10%);
+  border-radius: 1rem;
+  // box-shadow: 0 1px 13px 0px rgb(0 0 0 / 10%);
+  --tw-shadow: 0 1px 3px 0 #0000001a,0 1px 2px 0 #0000000f!important;
+  box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)!important;
 }
 
 //************ BUTTONS ***********//
@@ -102,12 +108,19 @@ aside.ng-sidebar {
 }
 
 .btn {
-  border-radius: 00.3rem;
-  &:focus{
-    border: none !important;
-    box-shadow: none;
+  box-shadow: 0 0 0 0 #0003, 0 0 0 0 #00000024,0 0 0 0 #0000001f;
+  border-radius: 5rem;
+  padding: 0.5rem 0.9rem;
+  line-height: 1!important;
+  font-size: 1rem;
+  font-weight: 500;
+
+  &:active, &:focus{
+    border-color: transparent  !important;
+    box-shadow: none !important;
   }
 }
+
 
 .btn[disabled]{
   cursor:not-allowed;
@@ -116,11 +129,6 @@ aside.ng-sidebar {
 .btn-success {
   color: #fff;
   border-color: $succesBackGround;
-  // &:focus {
-  //   background-color: $succesBackGround;
-  //   border-color: transparent;
-  //   box-shadow: none;
-  // }
 }
 
 //------------------- ALERTS ---------------------//
@@ -166,7 +174,7 @@ aside.ng-sidebar {
 }
 
 h4.agm-page-tittle {
-  font-weight: 500;
+  font-weight: 600;
   padding-top: 0.5rem;
   padding-bottom: 1rem;
   padding-left: 0;
@@ -210,7 +218,7 @@ a.xng-breadcrumb-link:hover {
 
 // **************** TOAST ******************** //
 .toast {
-  border-radius: 0.3rem;
+  border-radius: 1rem;
   font-weight: 600 !important;
   border-left-width: 0.22rem;
   border-left-style: solid;
