@@ -3,9 +3,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ComponentsComponent } from './modules/componentes/components/components.component';
 
+import { AuthGuard } from './shared/guards/auth.guard';
+
 const routes: Routes = [
   {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
     path: 'home',
+    canActivate: [AuthGuard],
     loadChildren: () => import('@home/home.module').then((m) => m.HomeModule),
     data: {
       title: 'page1',
@@ -19,6 +26,8 @@ const routes: Routes = [
   },
   {
     path: 'componentes',
+    canActivate: [AuthGuard],
+
     loadChildren: () =>
       import('./modules/componentes/componentes.module').then(
         (m) => m.ComponentesModule
@@ -26,6 +35,7 @@ const routes: Routes = [
   },
   {
     path: 'admin',
+    canActivate: [AuthGuard],
     loadChildren: () =>
       import('./modules/admin/admin.module').then((m) => m.AdminModule),
     data: {
@@ -40,16 +50,13 @@ const routes: Routes = [
   },
   {
     path: 'dev',
+    canActivate: [AuthGuard],
     loadChildren: () =>
       import('./modules/expodev/expodev.module').then((m) => m.ExpodevModule),
   },
   {
-    path:"login",
-    component:LoginComponent
-  },
-  {
     path: '**',
-    redirectTo: 'home',
+    redirectTo: 'login',
   },
 ];
 

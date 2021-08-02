@@ -1,54 +1,57 @@
-<div class="row">
-  <h4 class="agm-page-tittle">
-    Directivas
-  </h4>
-</div>
-<div class="row agm-box">
-  <div class="col-12 pt-4 pl-4 pb-2 pr-4">
-    <b>Ng Style :</b>
-    <br>
-    <code >ngStyle="'font-size': '25px'"</code>
-    <p [ngStyle]="{'font-size': '25px'}">
-      Hello World
-    </p>
-    <code>[style.color]="'purple'" [style.fontSize.px]="27"</code>
-    <p [style.color]="'purple'" [style.fontSize.px]="27">
-      Hello World
-    </p>
+<section class="page">
+  <div class="row">
+    <h4 class="agm-page-tittle">
+      Directivas
+    </h4>
   </div>
-  <div class="col-12 pt-4 pl-4 pb-2 pr-4">
-    <b>Ng Class :</b>
-    <br>
-    <code >[ngClass]="alertClass"</code>
-    <button class="btn btn-success ml-4" (click)="changeClass(true)"> S </button>
-    <button class="btn btn-primary ml-4" (click)="changeClass(false)"> I </button>
-    <div class="mt-3 alert" [ngClass]="alertClass">
-      Hello World
+  <div class="row agm-box">
+    <div class="col-12 pt-4 pl-4 pb-2 pr-4">
+      <b>Ng Style :</b>
+      <br>
+      <code >ngStyle="'font-size': '25px'"</code>
+      <p [ngStyle]="{'font-size': '25px'}">
+        Hello World
+      </p>
+      <code>[style.color]="'purple'" [style.fontSize.px]="27"</code>
+      <p [style.color]="'purple'" [style.fontSize.px]="27">
+        Hello World
+      </p>
     </div>
-    <code> [ngClass]="'text-warning':texto.warning, 'text-muted':!texto.warning </code>
-    <p [ngClass]="{'text-warning':texto.warning, 'text-muted':!texto.warning}">
-      Hello World
-    </p>
+    <div class="col-12 pt-4 pl-4 pb-2 pr-4">
+      <b>Ng Class :</b>
+      <br>
+      <code >[ngClass]="alertClass"</code>
+      <button class="btn btn-success ml-4" (click)="changeClass(true)"> S </button>
+      <button class="btn btn-primary ml-4" (click)="changeClass(false)"> I </button>
+      <div class="mt-3 alert" [ngClass]="alertClass">
+        Hello World
+      </div>
+      <code> [ngClass]="'text-warning':texto.warning, 'text-muted':!texto.warning </code>
+      <p [ngClass]="{'text-warning':texto.warning, 'text-muted':!texto.warning}">
+        Hello World
+      </p>
+    </div>
+
+    <div class="col-12 pt-4 pl-4 pb-2 pr-4">
+      <b>Ng Class Async :</b>
+      <br>
+      <code> [ngClass]="'icon-spin' : cargando" </code> <br>
+
+      <button [disabled]="cargando" (click)="asyncIconClass()"  class="btn btn-info"><i class="material-icons" [ngClass]="{'icon-spin' : cargando}">refresh</i>
+        <span *ngIf="!cargando">Async</span>
+        <span *ngIf="cargando"> Wait... </span>
+      </button>
+    </div>
+
+    <div class="col-12 pt-4 pl-4 pb-2 pr-4">
+      <b>Custom Directive:</b>
+      <br>
+      <code> appCustomDirectiva : color </code> <br>
+      <div class="p-2 mt-2" [appCustomDirectiva]="'purple'"> Border is coming </div>
+
+    </div>
+
   </div>
 
-  <div class="col-12 pt-4 pl-4 pb-2 pr-4">
-    <b>Ng Class Async :</b>
-    <br>
-    <code> [ngClass]="'icon-spin' : cargando" </code> <br>
 
-    <button [disabled]="cargando" (click)="asyncIconClass()"  class="btn btn-info"><i class="material-icons" [ngClass]="{'icon-spin' : cargando}">refresh</i>
-      <span *ngIf="!cargando">Async</span>
-      <span *ngIf="cargando"> Wait... </span>
-    </button>
-  </div>
-
-  <div class="col-12 pt-4 pl-4 pb-2 pr-4">
-    <b>Custom Directive:</b>
-    <br>
-    <code> appCustomDirectiva : color </code> <br>
-    <div class="p-2 mt-2" [appCustomDirectiva]="'purple'"> Border is coming </div>
-
-  </div>
-
-</div>
-
+</section>
