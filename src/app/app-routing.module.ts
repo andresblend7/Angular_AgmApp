@@ -1,3 +1,4 @@
+import { LoginComponent } from './modules/auth/login/login.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ComponentsComponent } from './modules/componentes/components/components.component';
@@ -41,6 +42,10 @@ const routes: Routes = [
     path: 'dev',
     loadChildren: () =>
       import('./modules/expodev/expodev.module').then((m) => m.ExpodevModule),
+  },
+  {
+    path:"login",
+    component:LoginComponent
   },
   {
     path: '**',

@@ -22,8 +22,10 @@ span.active,
 i.active,
 a.active,
 p.active {
-  color: $primaryColor !important;
+  color: $primary-active !important;
 }
+
+
 
 .hover-primary:hover {
   color: $primaryColor;
@@ -68,8 +70,10 @@ p.active {
 }
 
 // ********* SIDEBAR ***********//
+
 .ng-sidebar {
-  background-color: #fff;
+  color: white;
+  background-color: #37474F;
   box-shadow: 1px -1px 2px 0 #0000000d, -2px -2px 0px 0px #cccccc82,
     -1px 6px 5px 0px #ffffff00;
   //background-color: red;
@@ -79,21 +83,59 @@ p.active {
 aside.ng-sidebar {
   z-index: 10 !important;
 }
+span.brand-expand{
+  display: none;
+}
 
 .ng-sidebar--closed {
   i {
     float: right;
   }
+
+  span.brand-expand{
+    display: flex;
+    float: right;
+    padding-right: 12px;
+  }
+
+  span.brand-expand-off{
+    display: none;
+  }
 }
 
 
-.ag-shadow{
+///************* AGM *****************///
+.agm-shadow{
   --tw-shadow: 0 1px 3px 0 #0000001a,0 1px 2px 0 #0000000f!important;
 }
 
 .agm-box {
   background-color: #fff;
   border-radius: 1rem;
+  // box-shadow: 0 1px 13px 0px rgb(0 0 0 / 10%);
+  --tw-shadow: 0 1px 3px 0 #0000001a,0 1px 2px 0 #0000000f!important;
+  box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)!important;
+    /* This section calls the slideInFromLeft animation we defined above */
+
+}
+
+section.page{
+  animation: 0.2s ease-out 0s 1 slideInFromLeft;
+}
+
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.agm-box-rect{
+  background-color: #fff;
   // box-shadow: 0 1px 13px 0px rgb(0 0 0 / 10%);
   --tw-shadow: 0 1px 3px 0 #0000001a,0 1px 2px 0 #0000000f!important;
   box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)!important;

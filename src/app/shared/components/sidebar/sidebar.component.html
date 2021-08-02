@@ -7,6 +7,12 @@
     [mode]="_MODES[modeSideBar]"
   >
     <!-- <button class="form-control btn btn-danger" (click)="_toggleSidebar()">X</button> -->
+    <div class="header-sidebar text-center pt-4">
+      <span class="brand active">
+        <span class="brand-expand">AD</span>
+        <span class="brand-expand-off">AGM-DEVELOP</span>
+      </span>
+    </div>
     <ul class="sidebar-menu">
       <span class="hover-primary">
         <li routerLink="/home" routerLinkActive="active">
@@ -98,6 +104,9 @@
 
   <!-- Page content -->
   <div ng-sidebar-content>
+
+    <app-header></app-header>
+
     <div class="container-fluid pl-5 pr-5 mt-3 mb-5">
 
       <!-- BREADCRUMBS -->

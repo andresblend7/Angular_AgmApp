@@ -1,31 +1,45 @@
+
+.header-sidebar{
+  height: 75px;
+  border-bottom: 1px solid #515f67;
+  font-size: 18px;
+}
+
 ul.sidebar-menu {
-  max-width: 230px;
+  max-width: 235px;
   list-style-type: none;
-  min-width: 230px;
+  min-width: 235px;
   padding-left: 1rem;
   vertical-align: middle;
-
+  padding-top: 2rem;
+  padding-right: 0.5rem;
   i {
     vertical-align: -6px; /*Change this to adjust the icon*/
   }
 
-  li:first-child {
-    padding-top: 2.5rem;
-  }
   li {
     font-size: 15px;
-    padding-left: 0.3rem;
-    padding-bottom: 1.5rem;
-
+    padding-left: 0.8rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    border-radius: 1rem 0rem 0rem 1rem;
     i {
       padding-right: 0.6rem;
     }
     i.icon-expand {
       float: right;
     }
-    &:focus{
+    &:focus {
       outline: 0;
     }
+    &:hover{
+      background-color:#515f678a ;
+      cursor: pointer;
+    }
+  }
+
+  li.active{
+    background-color:#515f67 ;
   }
 
   ul li {
@@ -36,7 +50,8 @@ ul.sidebar-menu {
   }
 }
 
-.sidebar-footer , .sidebar-footer i{
+.sidebar-footer,
+.sidebar-footer i {
   text-align: center;
   align-items: center;
   vertical-align: middle;

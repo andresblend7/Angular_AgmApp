@@ -1,138 +1,141 @@
-<div class="row">
-  <h4 class="agm-page-tittle">Agm Custom Components</h4>
-</div>
-
-<div class="row agm-box pb-5 mb-5">
-  <div class="col-12 p-4">
-    <ul
-      ngbNav
-      #nav="ngbNav"
-      [(activeId)]="active"
-      class="nav-tabs justify-content-center nav-fill"
-    >
-      <li [ngbNavItem]="1">
-        <a ngbNavLink> Alertas </a>
-        <ng-template ngbNavContent>
-          <div class="row">
-            <div class="col-12 pl-4 pb-2 pr-4">
-
-              <h5 class="agm-page-section-titlle mt-4 mb-4">.alert-agm :</h5>
-
-              <div *ngIf="showAlerts" class="">
-                <ngb-alert
-                  class="alert-agm alert-agm-success"
-                  type="success"
-                  (close)="closeAlert()"
-                  [dismissible]="false"
-                >
-                  <b> Notificación </b>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Perspiciatis eaque sed harum quod nisi iste iure aspernatur
-                    fugit officiis libero consequuntur, ab provident, vel neque
-                    animi beatae numquam at vitae.
-                  </p>
-                </ngb-alert>
-
-                <ngb-alert
-                  class="alert-agm alert-agm-danger"
-                  type="danger"
-                  (close)="closeAlert()"
-                  [dismissible]="false"
-                >
-                  <b> ¡Atención! </b>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Perspiciatis eaque sed harum quod nisi iste iure aspernatur
-                    fugit officiis libero consequuntur, ab provident, vel neque
-                    animi beatae numquam at vitae.
-                  </p>
-                </ngb-alert>
-
-                <ngb-alert
-                  class="alert-agm alert-agm-warning"
-                  type="warning"
-                  (close)="closeAlert()"
-                  [dismissible]="false"
-                >
-                  <b> Recuerda </b>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Perspiciatis eaque sed harum quod nisi iste iure aspernatur
-                    fugit officiis libero consequuntur, ab provident, vel neque
-                    animi beatae numquam at vitae.
-                  </p>
-                </ngb-alert>
-
-                <ngb-alert
-                  class="alert-agm alert-agm-primary"
-                  type="primary"
-                  (close)="closeAlert()"
-                  [dismissible]="false"
-                >
-                  <b> Información </b>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Perspiciatis eaque sed harum quod nisi iste iure aspernatur
-                    fugit officiis libero consequuntur, ab provident, vel neque
-                    animi beatae numquam at vitae.
-                  </p>
-                </ngb-alert>
-              </div>
-              <div class="w-100 pt-2 text-center">
-                <h5 class="agm-page-section-titlle">Notificiaciones - Toast</h5>
-                <button (click)="toastSucess('bg-primary', 'Esto es una notificación para mostrar una alerta informativa', 'info')" class="btn btn-ripple btn-primary ml-1 ml-2">
-                  Toast- primary
-                </button>
-                <button (click)="toastSucess('bg-success','Esto es una notificación para mostrar una alerta tipo exitosa', 'done')" class="btn btn-ripple btn-success ml-1 ml-2">
-                  Toast- Success
-                </button>
-                <button (click)="toastSucess('bg-danger', 'Esto es una notificación para mostrar una alerta de peligro', 'close')" class="btn btn-ripple btn-danger ml-1 ml-2">
-                  Toast- danger
-                </button>
-                <button (click)="toastSucess('bg-warning', 'Esto es una notificación para mostrar una alerta de precaucion', 'report_problem')" class="btn btn-ripple btn-warning ml-1 ml-2">
-                  Toast- warning
-                </button>
-              </div>
-
-              <div class="w-100 pt-2 text-center">
-                <h5 class="agm-page-section-titlle">Notificiaciones - Toast (Light)</h5>
-                <button (click)="toastSucess('bg-primary-light', 'Esto es una notificación para mostrar una alerta informativa', 'info')" class="btn btn-ripple btn-outline-primary">
-                  Toast- primary
-                </button>
-                <button (click)="toastSucess('bg-success-light','Esto es una notificación para mostrar una alerta tipo exitosa', 'done')" class="btn btn-ripple btn-outline-success ml-1 ml-2">
-                  Toast- Success
-                </button>
-                <button (click)="toastSucess('bg-danger-light', 'Esto es una notificación para mostrar una alerta de peligro', 'close')" class="btn btn-ripple btn-outline-danger ml-1 ml-2">
-                  Toast- danger
-                </button>
-                <button (click)="toastSucess('bg-warning-light', 'Esto es una notificación para mostrar una alerta de precaucion', 'report_problem')" class="btn btn-ripple btn-outline-warning ml-1 ml-2">
-                  Toast- warning
-                </button>
-              </div>
-
-            </div>
-          </div>
-        </ng-template>
-      </li>
-      <li [ngbNavItem]="2">
-        <a ngbNavLink>Modales</a>
-        <ng-template ngbNavContent>
-          <app-modal></app-modal>
-        </ng-template>
-      </li>
-      <li [ngbNavItem]="3">
-        <a ngbNavLink>G-Charts</a>
-        <ng-template ngbNavContent>
-          <p>
-           <app-gcharts></app-gcharts>
-          </p>
-        </ng-template>
-      </li>
-    </ul>
-
-    <div [ngbNavOutlet]="nav" class="mt-2"></div>
-
-    <!-- <pre>Active: {{ active }}</pre> -->
+<section class="page">
+  <div class="row">
+    <h4 class="agm-page-tittle">Agm Custom Components</h4>
   </div>
-</div>
+
+  <div class="row agm-box pb-5 mb-5">
+    <div class="col-12 p-4">
+      <ul
+        ngbNav
+        #nav="ngbNav"
+        [(activeId)]="active"
+        class="nav-tabs justify-content-center nav-fill"
+      >
+        <li [ngbNavItem]="1">
+          <a ngbNavLink> Alertas </a>
+          <ng-template ngbNavContent>
+            <div class="row">
+              <div class="col-12 pl-4 pb-2 pr-4">
+
+                <h5 class="agm-page-section-titlle mt-4 mb-4">.alert-agm :</h5>
+
+                <div *ngIf="showAlerts" class="">
+                  <ngb-alert
+                    class="alert-agm alert-agm-success"
+                    type="success"
+                    (close)="closeAlert()"
+                    [dismissible]="false"
+                  >
+                    <b> Notificación </b>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Perspiciatis eaque sed harum quod nisi iste iure aspernatur
+                      fugit officiis libero consequuntur, ab provident, vel neque
+                      animi beatae numquam at vitae.
+                    </p>
+                  </ngb-alert>
+
+                  <ngb-alert
+                    class="alert-agm alert-agm-danger"
+                    type="danger"
+                    (close)="closeAlert()"
+                    [dismissible]="false"
+                  >
+                    <b> ¡Atención! </b>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Perspiciatis eaque sed harum quod nisi iste iure aspernatur
+                      fugit officiis libero consequuntur, ab provident, vel neque
+                      animi beatae numquam at vitae.
+                    </p>
+                  </ngb-alert>
+
+                  <ngb-alert
+                    class="alert-agm alert-agm-warning"
+                    type="warning"
+                    (close)="closeAlert()"
+                    [dismissible]="false"
+                  >
+                    <b> Recuerda </b>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Perspiciatis eaque sed harum quod nisi iste iure aspernatur
+                      fugit officiis libero consequuntur, ab provident, vel neque
+                      animi beatae numquam at vitae.
+                    </p>
+                  </ngb-alert>
+
+                  <ngb-alert
+                    class="alert-agm alert-agm-primary"
+                    type="primary"
+                    (close)="closeAlert()"
+                    [dismissible]="false"
+                  >
+                    <b> Información </b>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Perspiciatis eaque sed harum quod nisi iste iure aspernatur
+                      fugit officiis libero consequuntur, ab provident, vel neque
+                      animi beatae numquam at vitae.
+                    </p>
+                  </ngb-alert>
+                </div>
+                <div class="w-100 pt-2 text-center">
+                  <h5 class="agm-page-section-titlle">Notificiaciones - Toast</h5>
+                  <button (click)="toastSucess('bg-primary', 'Esto es una notificación para mostrar una alerta informativa', 'info')" class="btn btn-ripple btn-primary ml-1 ml-2">
+                    Toast- primary
+                  </button>
+                  <button (click)="toastSucess('bg-success','Esto es una notificación para mostrar una alerta tipo exitosa', 'done')" class="btn btn-ripple btn-success ml-1 ml-2">
+                    Toast- Success
+                  </button>
+                  <button (click)="toastSucess('bg-danger', 'Esto es una notificación para mostrar una alerta de peligro', 'close')" class="btn btn-ripple btn-danger ml-1 ml-2">
+                    Toast- danger
+                  </button>
+                  <button (click)="toastSucess('bg-warning', 'Esto es una notificación para mostrar una alerta de precaucion', 'report_problem')" class="btn btn-ripple btn-warning ml-1 ml-2">
+                    Toast- warning
+                  </button>
+                </div>
+
+                <div class="w-100 pt-2 text-center">
+                  <h5 class="agm-page-section-titlle">Notificiaciones - Toast (Light)</h5>
+                  <button (click)="toastSucess('bg-primary-light', 'Esto es una notificación para mostrar una alerta informativa', 'info')" class="btn btn-ripple btn-outline-primary">
+                    Toast- primary
+                  </button>
+                  <button (click)="toastSucess('bg-success-light','Esto es una notificación para mostrar una alerta tipo exitosa', 'done')" class="btn btn-ripple btn-outline-success ml-1 ml-2">
+                    Toast- Success
+                  </button>
+                  <button (click)="toastSucess('bg-danger-light', 'Esto es una notificación para mostrar una alerta de peligro', 'close')" class="btn btn-ripple btn-outline-danger ml-1 ml-2">
+                    Toast- danger
+                  </button>
+                  <button (click)="toastSucess('bg-warning-light', 'Esto es una notificación para mostrar una alerta de precaucion', 'report_problem')" class="btn btn-ripple btn-outline-warning ml-1 ml-2">
+                    Toast- warning
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="2">
+          <a ngbNavLink>Modales</a>
+          <ng-template ngbNavContent>
+            <app-modal></app-modal>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="3">
+          <a ngbNavLink>G-Charts</a>
+          <ng-template ngbNavContent>
+            <p>
+             <app-gcharts></app-gcharts>
+            </p>
+          </ng-template>
+        </li>
+      </ul>
+
+      <div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+      <!-- <pre>Active: {{ active }}</pre> -->
+    </div>
+  </div>
+
+</section>

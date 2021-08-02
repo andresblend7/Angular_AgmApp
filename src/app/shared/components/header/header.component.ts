@@ -1,6 +1,7 @@
 import { SidebarService } from './../../services/sidebar.service';
 import { Component, OnInit, Output } from '@angular/core';
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',

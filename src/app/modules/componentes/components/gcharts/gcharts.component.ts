@@ -45,8 +45,8 @@ export class GchartsComponent implements OnInit, OnDestroy {
       const pushitem = ''+this.auxCount;
       this.chart_Labels2.push(pushitem);
 
-      this.dataChartLine2.data?.push(this.getRandomValue(25, 80));
-      this.dataChartLine2_2.data?.push(this.getRandomValue(5, 55));
+      this.dataChartLine2.data?.push(this.getRandomValue(70, 85));
+      this.dataChartLine2_2.data?.push(this.getRandomValue(40, 75));
 
       this.auxCount++;
 
@@ -61,12 +61,18 @@ export class GchartsComponent implements OnInit, OnDestroy {
     }, 2000);
   }
   getRandomValue (min:number, max:number):number {
-    return Math.round(Math.random() * (max) + min);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
   public chart_Options: ChartOptions = {
     responsive: true,
     maintainAspectRatio: true,
+    //Curva:
+    elements:{
+      line:{
+        tension:0
+      }
+    }
   };
   public chart_Labels: Label[] = [
     '2015',
