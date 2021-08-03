@@ -8,28 +8,25 @@
   >
     <!-- <button class="form-control btn btn-danger" (click)="_toggleSidebar()">X</button> -->
     <div class="header-sidebar text-center pt-4">
-      <span class="brand active">
+      <span class="brand">
         <span class="brand-expand">AD</span>
         <span class="brand-expand-off">AGM-DEVELOP</span>
       </span>
     </div>
     <ul class="sidebar-menu">
-      <span class="hover-primary">
-        <li routerLink="/home" routerLinkActive="active">
-          <span class="hover-primary"  routerLinkActive="active">
+        <li routerLink="/board/home" routerLinkActive="active">
+          <span class=""  >
             <i class="material-icons-outlined"> home </i> Home
           </span>
         </li>
-      </span>
-      <li  routerLink="/componentes" routerLinkActive="active">
-        <span class="hover-primary"  routerLinkActive="active">
+      <li  routerLink="/board/componentes" routerLinkActive="active">
+        <span>
           <i class="material-icons-outlined"> workspaces </i> Componentes
         </span>
       </li>
 
       <li>
         <span
-          class="hover-primary"
           (click)="collapse.toggle(); toggleForChilds()"
           [attr.aria-expanded]="!isCollapsed2"
           aria-controls="collapseExample">
@@ -41,14 +38,14 @@
         </span>
         <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed2">
           <ul>
-            <li routerLink="/dev/directivas" routerLinkActive="active">
-              <span class="hover-primary" routerLinkActive="active"> Directivas </span>
+            <li routerLink="/board/dev/directivas" routerLinkActive="active">
+              <span > Directivas </span>
             </li>
-            <li routerLink="/dev/pipes" routerLinkActive="active">
-              <span class="hover-primary"> Pipes </span>
+            <li routerLink="/board/dev/pipes" routerLinkActive="active">
+              <span > Pipes </span>
             </li>
-            <li routerLink="/dev/rxjs" routerLinkActive="active">
-              <span class="hover-primary"> Rxjs </span>
+            <li routerLink="/board/dev/rxjs" routerLinkActive="active">
+              <span > Rxjs </span>
             </li>
           </ul>
         </div>
@@ -77,13 +74,13 @@
         </span>
         <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed1">
           <ul>
-            <li routerLink="/admin/usuarios" routerLinkActive="active">
+            <li routerLink="/board/admin/usuarios" routerLinkActive="active">
               <span class="hover-primary"> Usuarios </span>
             </li>
-            <li routerLink="/admin/roles" routerLinkActive="active">
+            <li routerLink="/board/admin/roles" routerLinkActive="active">
               <span class="hover-primary"> Roles </span>
             </li>
-            <li routerLink="/admin/permisos" routerLinkActive="active">
+            <li routerLink="/board/admin/permisos" routerLinkActive="active">
               <span class="hover-primary"> Permisos </span>
             </li>
           </ul>
@@ -113,7 +110,9 @@
       <app-breadcrumb></app-breadcrumb>
 
       <!-- RUTAS DEL CONTENIDO -->
-      <router-outlet></router-outlet>
+      <!-- <router-outlet></router-outlet> -->
+      <!-- SECTION RENDER -->
+      <ng-content></ng-content>
       <br><br><br>
     </div>
 

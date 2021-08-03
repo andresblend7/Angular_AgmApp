@@ -1,7 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@import "agm_custom";
 
 .header-sidebar{
   height: 75px;
-  border-bottom: 1px solid #515f67;
+  border-bottom: 1px solid #037d92;
   font-size: 18px;
 }
 
@@ -12,7 +14,7 @@ ul.sidebar-menu {
   padding-left: 1rem;
   vertical-align: middle;
   padding-top: 2rem;
-  padding-right: 0.5rem;
+  // padding-right: 0.5rem;
   i {
     vertical-align: -6px; /*Change this to adjust the icon*/
   }
@@ -24,7 +26,7 @@ ul.sidebar-menu {
     padding-top: 1rem;
     border-radius: 1rem 0rem 0rem 1rem;
     i {
-      padding-right: 0.6rem;
+      padding-right: 0.8rem;
     }
     i.icon-expand {
       float: right;
@@ -33,13 +35,16 @@ ul.sidebar-menu {
       outline: 0;
     }
     &:hover{
-      background-color:#515f678a ;
+      background-color:#385269ee ;
       cursor: pointer;
+      font-weight: 500;
     }
   }
 
   li.active{
-    background-color:#515f67 ;
+    // background-color:#333363 ;
+    background-color:#405e7a ;
+    border-right: 0.2rem solid $primary;
   }
 
   ul li {
@@ -60,3 +65,5 @@ ul.sidebar-menu {
   position: absolute;
   bottom: 0;
 }
+
+

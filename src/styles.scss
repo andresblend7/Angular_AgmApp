@@ -2,7 +2,7 @@
 @import "agm_custom";
 
 $theme-colors: (
-  primary: $primaryColor,
+  primary: $primary,
   success: $succesBackGround,
 );
 
@@ -28,7 +28,7 @@ p.active {
 
 
 .hover-primary:hover {
-  color: $primaryColor;
+  color: $primary;
   cursor: pointer;
 }
 
@@ -73,7 +73,8 @@ p.active {
 
 .ng-sidebar {
   color: white;
-  background-color: #37474F;
+  // background-color: #37474F;
+  background-color: #2b4055;
   box-shadow: 1px -1px 2px 0 #0000000d, -2px -2px 0px 0px #cccccc82,
     -1px 6px 5px 0px #ffffff00;
   //background-color: red;
@@ -203,7 +204,7 @@ section.page{
 .alert-agm-primary {
   background-color: rgba(58, 180, 201, 0.096);
   border-color: $primaryBorder;
-  color: $primaryColor;
+  color: $primary;
 }
 
 .alert-agm-warning {
@@ -244,7 +245,7 @@ label.xng-breadcrumb-trail {
 }
 
 a.xng-breadcrumb-link:hover {
-  color: $primaryColor;
+  color: $primary;
 }
 
 .xng-breadcrumb-list {

@@ -11,7 +11,7 @@ const routes: Routes = [
     component: LoginComponent,
   },
   {
-    path: 'home',
+    path: 'board',
     canActivate: [AuthGuard],
     loadChildren: () => import('@home/home.module').then((m) => m.HomeModule),
     data: {
@@ -25,39 +25,11 @@ const routes: Routes = [
     },
   },
   {
-    path: 'componentes',
-    canActivate: [AuthGuard],
+    path:'**',
+    redirectTo:'board'
+  }
 
-    loadChildren: () =>
-      import('./modules/componentes/componentes.module').then(
-        (m) => m.ComponentesModule
-      ),
-  },
-  {
-    path: 'admin',
-    canActivate: [AuthGuard],
-    loadChildren: () =>
-      import('./modules/admin/admin.module').then((m) => m.AdminModule),
-    data: {
-      title: 'page1',
-      breadcrumb: [
-        {
-          label: 'Admin',
-          url: 'admin',
-        },
-      ],
-    },
-  },
-  {
-    path: 'dev',
-    canActivate: [AuthGuard],
-    loadChildren: () =>
-      import('./modules/expodev/expodev.module').then((m) => m.ExpodevModule),
-  },
-  {
-    path: '**',
-    redirectTo: 'login',
-  },
+
 ];
 
 @NgModule({
