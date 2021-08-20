@@ -1,10 +1,26 @@
 .body-login{
   overflow-y: auto;
 }
+
+
 .message-login-container{
-  background-color: #2b4055;
   color: white;
+  background-image: url("/assets/images/bg_login2.jpg");
+  background-size: cover;
+  background-repeat: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
+
+
+.message-login-bgcolor{
+  width: 100%;
+  height: 100%;
+ // background: #4877a786;
+  background-color: #2b4055;
+}
+
 .message-login{
   width: 50%;
   height: 50%;
@@ -46,4 +62,16 @@
 .custom-control-input:checked~.custom-control-label::before {
     color: white !important;
     background-color: green !important;
+}
+
+#test{
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #2b4055;
+  clip-path: polygon(50% 0%, 50% 43%, 90% 20%, 46% 51%, 42% 67%, 32% 100%, 34% 55%, 0% 43%, 37% 43%);
+
+
+
+
 }
