@@ -1,3 +1,4 @@
+import { ApiResponsesComponent } from './../api-responses/api-responses.component';
 import { HomeComponent } from './pages/home/home.component';
 import { Routes, RouterModule, Router } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -22,7 +23,6 @@ const routes: Routes = [
       {
         path: 'componentes',
         canActivate: [AuthGuard],
-
         loadChildren: () =>
           import('../../modules/componentes/componentes.module').then(
             (m) => m.ComponentesModule
@@ -50,6 +50,20 @@ const routes: Routes = [
           import('../../modules/expodev/expodev.module').then(
             (m) => m.ExpodevModule
           ),
+      },
+      {
+        path: 'api',
+        canActivate: [AuthGuard],
+        component:ApiResponsesComponent,
+        data: {
+          title: 'ApiResponse',
+          breadcrumb: [
+            {
+              label: 'ApiResponse',
+              url: 'home',
+            },
+          ],
+        },
       },
       {
         path: '**',

@@ -1,5 +1,5 @@
 import { SidebarService } from './shared/services/sidebar.service';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavigationStart, Router } from '@angular/router';
 
 @Component({
@@ -7,17 +7,21 @@ import { NavigationStart, Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   objeto = {
     nombre: 'andres'
   }
 
   constructor(private router: Router, sidebarSvc: SidebarService) {
+
     this.router.events.subscribe((event: any) => {
       if (event instanceof NavigationStart) {
         sidebarSvc.navigationEnded();
       }
     });
+  }
+  ngOnInit(): void {
+
   }
 
   title = 'AgmApp';
@@ -28,6 +32,10 @@ export class AppComponent {
   toggleMenu() {
     this.isCollapsed = !this.isCollapsed;
   }
+
+
+
+
 }
 
 export interface  Sujeto{

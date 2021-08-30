@@ -1,3 +1,4 @@
+import { ApiResponsesComponent } from './../api-responses/api-responses.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -13,6 +14,7 @@ import { BreadcrumbComponent } from '../../shared/components/breadcrumb/breadcru
 
 import {BreadcrumbModule} from 'xng-breadcrumb';
 import { InitComponent } from './init/init.component';
+import { SharedModule } from '@app/shared/shared.module';
 
 
 @NgModule({
@@ -22,14 +24,17 @@ import { InitComponent } from './init/init.component';
     SidebarComponent,
     HeaderComponent,
     BreadcrumbComponent,
-    InitComponent
+    InitComponent,
+    ApiResponsesComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
+    SharedModule,
     NgbModule,
     SidebarModule.forRoot(),
-    BreadcrumbModule
+    BreadcrumbModule,
+
   ]
 })
 export class HomeModule { }

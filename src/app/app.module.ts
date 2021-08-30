@@ -14,7 +14,10 @@ import { SidebarComponent } from './shared/components/sidebar/sidebar.component'
 // import { BreadcrumbComponent } from './shared/components/breadcrumb/breadcrumb.component';
 import { ToastNotificationsComponent } from './shared/components/toast-notifications/toast-notifications.component';
 import { LoginComponent } from './modules/auth/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
 
+
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,13 +26,15 @@ import { LoginComponent } from './modules/auth/login/login.component';
     // HeaderComponent,
     // BreadcrumbComponent,
     ToastNotificationsComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BreadcrumbModule,
     NgbModule,
+    ReactiveFormsModule,
+    HttpClientModule
     // SidebarModule.forRoot(),
   ],
   exports:[

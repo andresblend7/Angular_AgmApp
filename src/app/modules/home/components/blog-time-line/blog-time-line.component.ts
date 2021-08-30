@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '@app/modules/auth/auth.service';
 
 @Component({
   selector: 'app-blog-time-line',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogTimeLineComponent implements OnInit {
 
-  constructor() { }
+  accesId!:string;
+
+  constructor(private _oauthSv: AuthService) { }
 
   ngOnInit(): void {
+    // this.accesId = this._oauthSv
   }
 
 }

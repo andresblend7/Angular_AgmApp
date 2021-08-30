@@ -19,22 +19,21 @@
            Ingreso
          </h2>
          <div class="form-group p-3">
-           <label for="">Correo electrónico:</label>
-           <input type="text" class="form-control">
-           <label for="">Contraseña:</label>
-           <input type="text" class="form-control">
-          <div class="pt-3">
-            <input type="checkbox" class="custom-control-input"> <label for="" class="ml-3"> Recordarme</label>
-          </div>
-          <div class="pt-4 text-center">
-            <button class="btn btn-lg btn-primary form-control">
-              Ingresar
+          <form [formGroup]="loginForm"  (ngSubmit)="login()">
+            <label for="">Correo electrónico:</label>
+            <input type="email" name="email" formControlName="userName" class="form-control">
+            <label for="">Contraseña:</label>
+            <input type="password" name="password" formControlName="password" class="form-control">
+           <div class="pt-3">
+             <input type="checkbox" class="custom-control-input"> <label for="" class="ml-3"> Recordarme</label>
+           </div>
+           <div class="pt-4 text-center">
+             <button class="btn btn-ripple btn-primary" [disabled]="loading">
+              INGRESAR
             </button>
-          </div>
+           </div>
+          </form>
          </div>
-         <div id="test">
-
-        </div>
       </div>
     </div>
   </div>
