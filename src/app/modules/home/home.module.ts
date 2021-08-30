@@ -15,10 +15,11 @@ import { BreadcrumbComponent } from '../../shared/components/breadcrumb/breadcru
 import {BreadcrumbModule} from 'xng-breadcrumb';
 import { InitComponent } from './init/init.component';
 import { SharedModule } from '@app/shared/shared.module';
-
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 @NgModule({
   declarations: [
+
     HomeComponent,
     BlogTimeLineComponent,
     SidebarComponent,
@@ -26,6 +27,7 @@ import { SharedModule } from '@app/shared/shared.module';
     BreadcrumbComponent,
     InitComponent,
     ApiResponsesComponent
+
   ],
   imports: [
     CommonModule,
@@ -34,7 +36,7 @@ import { SharedModule } from '@app/shared/shared.module';
     NgbModule,
     SidebarModule.forRoot(),
     BreadcrumbModule,
-
-  ]
+    NgxDatatableModule
+    ]
 })
 export class HomeModule { }

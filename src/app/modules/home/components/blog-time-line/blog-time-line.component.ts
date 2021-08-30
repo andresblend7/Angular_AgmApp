@@ -1,3 +1,4 @@
+import { UserDataService } from './../../../../shared/services/user-data.service';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '@app/modules/auth/auth.service';
 
@@ -10,10 +11,13 @@ export class BlogTimeLineComponent implements OnInit {
 
   accesId!:string;
 
-  constructor(private _oauthSv: AuthService) { }
+  constructor(private _oauthSv: AuthService, private _userSV:UserDataService) { }
 
   ngOnInit(): void {
     // this.accesId = this._oauthSv
+    this._userSV.$userData.subscribe((res)=>{
+      this.accesId = res.accesId;
+    });
   }
 
 }

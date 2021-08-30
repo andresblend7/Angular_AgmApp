@@ -3,26 +3,24 @@ import { CommonModule } from '@angular/common';
 import { CustomPipePipe } from './pipes/custom-pipe.pipe';
 import { SecureURLPipe } from './pipes/secure-url.pipe';
 import { CustomDirectivaDirective } from './directivas/custom-directiva.directive';
-import { ElementsPermissionsDirective } from './directivas/elements-permissions.directive';
-
-
+import {  ElmentPerissionByRol } from './directivas/elements-permissions.directive';
 
 
 @NgModule({
   declarations: [
+    ElmentPerissionByRol,
     CustomPipePipe,
     SecureURLPipe,
     CustomDirectivaDirective,
-    ElementsPermissionsDirective
   ],
   imports: [
     CommonModule
   ],
   exports:[
+    ElmentPerissionByRol,
     CustomPipePipe,
     SecureURLPipe,
     CustomDirectivaDirective,
-    ElementsPermissionsDirective
   ]
 })
 export class SharedModule { }

@@ -1,1 +1,37 @@
-<p>api-responses works!</p>
+
+<section class="page">
+
+  <div class="row">
+    <h4 class="agm-page-tittle">
+      Api Data Requests
+    </h4>
+  </div>
+  <div class="row agm-box p-3 pt-5">
+    <div class="col">
+      <ngx-datatable  class="bootstrap"
+      [columns]="columns"
+      [columnMode]="'flex'"
+      [headerHeight]="60"
+      [footerHeight]="60"
+      rowHeight="auto"
+      [limit]="13"
+      [rows]="rows" >
+      <ngx-datatable-column name="Name" [flexGrow]="2">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{ value }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Gender" [flexGrow]="2">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{ value }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Company" [flexGrow]="2">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{ value }}
+        </ng-template>
+      </ngx-datatable-column>
+    </ngx-datatable>
+    </div>
+  </div>
+</section>

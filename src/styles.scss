@@ -1,10 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import "agm_custom";
+@import '~@swimlane/ngx-datatable/index.css';
+@import '~@swimlane/ngx-datatable/assets/icons.css';
 
 $theme-colors: (
   primary: $primary,
   success: $succesBackGround,
 );
+
+
 
 @import "~bootstrap/scss/bootstrap";
 
@@ -241,7 +245,7 @@ section.page{
 
 h4.agm-page-tittle {
   font-weight: 600;
-  padding-top: 0.5rem;
+  padding-top: 0.3rem;
   padding-bottom: 1rem;
   padding-left: 0;
 }
@@ -279,7 +283,7 @@ a.xng-breadcrumb-link:hover {
   margin: 0;
   padding: 0;
   font-size: 13px;
-  margin-bottom: 10px !important;
+  margin-bottom: 4px !important;
 }
 
 // **************** TOAST ******************** //
@@ -393,6 +397,46 @@ ngb-toast.toast.bg-warning {
   animation-duration: 0.2s;
 }
 
+
+//************** ngx-datatable ***************//
+.datatable-header-inner {
+  padding: 0.75rem;
+  max-width: 100% !important;
+  background-color:#f1f5f9 ;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+
+.ngx-datatable{
+  border: 1px solid #0000001c;
+  border-radius: 1rem !important;
+  font-size: 14px;
+
+  .page-count{
+    padding-left: 1rem;
+    font-weight: bold;
+  }
+
+  li.pages{
+    border-radius: 0.7rem;
+    padding:0.6rem  1rem !important;
+    a{
+      color: #979797;
+    }
+    &.pages.active{
+      font-weight: bold;
+      background-color: #23b99642 ;
+      a{
+        color: $primary-active !important;
+      }
+    }
+  }
+
+}
+.datatable-body-cell{
+  padding: 0.75rem;
+}
 
 //************** ANIMACIONES *************///
 @keyframes modalHolderOn {

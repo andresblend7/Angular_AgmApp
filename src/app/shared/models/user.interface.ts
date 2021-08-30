@@ -9,7 +9,7 @@ export interface UserResponse {
   names: string;
   username : string;
   photo:string;
-  accessId:string;
+  accesId:string;
 }
 export interface UserLogged{
   data:UserResponse;

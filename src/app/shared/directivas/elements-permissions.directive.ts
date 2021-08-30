@@ -1,17 +1,17 @@
 import { Directive, ElementRef, Input, TemplateRef, ViewContainerRef, OnInit } from '@angular/core';
 
 @Directive({
-  selector: '[appElementsPermissions]'
+  selector: '[appElmentPerissionByRol]'
 })
-export class ElementsPermissionsDirective implements OnInit {
+export class ElmentPerissionByRol implements OnInit {
 
-  @Input('appElementsPermissions')
+  @Input("appElmentPerissionByRol")
   roleToCheck!:string;
 
   constructor(private el:ElementRef, private temp:TemplateRef<any>, private viewContainer: ViewContainerRef) {
-
-
    }
+
+
   ngOnInit(): void {
     console.log("ROLES TO CHECK", this.roleToCheck);
 

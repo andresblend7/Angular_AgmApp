@@ -9,7 +9,7 @@ import { __LSStoreKey } from '../Helpers/dictionaries';
 export class UserDataService {
 
    userDataDefault:UserResponse = {
-    accessId  :'',
+    accesId  :'',
     names : '',
     photo : '',
     username : ''
