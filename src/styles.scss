@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "agm_custom";
-@import '~@swimlane/ngx-datatable/index.css';
-@import '~@swimlane/ngx-datatable/assets/icons.css';
+
 
 $theme-colors: (
   primary: $primary,
@@ -412,7 +411,7 @@ ngb-toast.toast.bg-warning {
   border: 1px solid #0000001c;
   border-radius: 1rem !important;
   font-size: 14px;
-
+  box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)!important;
   .page-count{
     padding-left: 1rem;
     font-weight: bold;
@@ -422,6 +421,8 @@ ngb-toast.toast.bg-warning {
     border-radius: 0.7rem;
     padding:0.6rem  1rem !important;
     a{
+      width: 15px;
+      text-align: center;
       color: #979797;
     }
     &.pages.active{
@@ -431,6 +432,10 @@ ngb-toast.toast.bg-warning {
         color: $primary-active !important;
       }
     }
+  }
+
+  .datatable-scroll{
+    max-width: 100% !important;
   }
 
 }

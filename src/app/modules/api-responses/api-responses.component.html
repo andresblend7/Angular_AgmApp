@@ -8,29 +8,35 @@
   </div>
   <div class="row agm-box p-3 pt-5">
     <div class="col">
-      <ngx-datatable  class="bootstrap"
-      [columns]="columns"
-      [columnMode]="'flex'"
+      <ngx-datatable  class="bootstrap agm-shadow"
+      [columns] ="columns"
+      [columnMode]="'force'"
       [headerHeight]="60"
       [footerHeight]="60"
       rowHeight="auto"
       [limit]="13"
       [rows]="rows" >
-      <ngx-datatable-column name="Name" [flexGrow]="2">
-        <ng-template let-value="value" ngx-datatable-cell-template>
+
+      <ngx-datatable-column name="Nombre" prop="name" >
+        <ng-template let-value="value"  ngx-datatable-cell-template>
           {{ value }}
         </ng-template>
       </ngx-datatable-column>
-      <ngx-datatable-column name="Gender" [flexGrow]="2">
-        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+      <ngx-datatable-column name="Rol" prop="gender" >
+        <ng-template let-row="row"   let-value="value" ngx-datatable-cell-template>
           {{ value }}
         </ng-template>
       </ngx-datatable-column>
-      <ngx-datatable-column name="Company" [flexGrow]="2">
-        <ng-template let-value="value" ngx-datatable-cell-template>
-          {{ value }}
+      <ngx-datatable-column name="Acciones"  prop="company" >
+        <ng-template let-value="value"   ngx-datatable-cell-template>
+
+          <div class="divcenter" >
+            {{ value }}
+          </div>
+
         </ng-template>
       </ngx-datatable-column>
+
     </ngx-datatable>
     </div>
   </div>

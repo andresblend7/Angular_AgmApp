@@ -15,8 +15,9 @@ import { BreadcrumbComponent } from '../../shared/components/breadcrumb/breadcru
 import {BreadcrumbModule} from 'xng-breadcrumb';
 import { InitComponent } from './init/init.component';
 import { SharedModule } from '@app/shared/shared.module';
-import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
+
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 @NgModule({
   declarations: [
 
@@ -26,7 +27,7 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
     HeaderComponent,
     BreadcrumbComponent,
     InitComponent,
-    ApiResponsesComponent
+    ApiResponsesComponent,
 
   ],
   imports: [

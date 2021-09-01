@@ -17,7 +17,6 @@ import { __LSStoreKey } from '@app/shared/Helpers/dictionaries';
 
 const jwtHelper = new JwtHelperService();
 
-
 @Injectable({
   providedIn: 'root',
 })
@@ -57,16 +56,24 @@ export class AuthService {
     this.removeToken();
   }
 
-  private checkToken() {
+  public getToken():string {
     const userToken = JSON.parse('' + localStorage.getItem(__LSStoreKey));
     if (userToken) {
-      const isExpired = jwtHelper.isTokenExpired(userToken.token || undefined);
-
-      const userIsLogged = !isExpired;
-      console.log('IsLooged', userIsLogged);
-
-      isExpired ? this.logOut() : this.$isAuthenticated.next(true);
+      return userToken.token;
+    } else {
+      return '';
     }
+  }
+
+  private checkToken() {
+
+    const token = this.getToken();
+    const isExpired = jwtHelper.isTokenExpired(token || undefined);
+
+    const userIsLogged = !isExpired;
+    console.log('IsLooged', userIsLogged);
+
+    isExpired ? this.logOut() : this.$isAuthenticated.next(true);
   }
 
   private removeToken() {

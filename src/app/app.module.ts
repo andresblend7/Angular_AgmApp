@@ -14,10 +14,11 @@ import { SidebarComponent } from './shared/components/sidebar/sidebar.component'
 // import { BreadcrumbComponent } from './shared/components/breadcrumb/breadcrumb.component';
 import { ToastNotificationsComponent } from './shared/components/toast-notifications/toast-notifications.component';
 import { LoginComponent } from './modules/auth/login/login.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { AuthInterceptor } from './shared/Helpers/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,11 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   exports:[
   ],
-  providers: [],
+  providers: [
+   {
+    provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true
+   }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
