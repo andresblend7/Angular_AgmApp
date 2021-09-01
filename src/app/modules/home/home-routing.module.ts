@@ -22,7 +22,7 @@ const routes: Routes = [
 
       {
         path: 'componentes',
-        canActivate: [AuthGuard],
+        // canActivate: [AuthGuard],
         loadChildren: () =>
           import('../../modules/componentes/componentes.module').then(
             (m) => m.ComponentesModule
@@ -30,7 +30,7 @@ const routes: Routes = [
       },
       {
         path: 'admin',
-        canActivate: [AuthGuard],
+        // canActivate: [AuthGuard],
         loadChildren: () =>
           import('../../modules/admin/admin.module').then((m) => m.AdminModule),
         data: {
@@ -45,7 +45,7 @@ const routes: Routes = [
       },
       {
         path: 'dev',
-        canActivate: [AuthGuard],
+        // canActivate: [AuthGuard],
         loadChildren: () =>
           import('../../modules/expodev/expodev.module').then(
             (m) => m.ExpodevModule
@@ -53,7 +53,7 @@ const routes: Routes = [
       },
       {
         path: 'api',
-        canActivate: [AuthGuard],
+        // canActivate: [AuthGuard],
         component:ApiResponsesComponent,
         data: {
           title: 'ApiResponse',

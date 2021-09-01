@@ -12,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'board',
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
     loadChildren: () => import('@home/home.module').then((m) => m.HomeModule),
     data: {
       title: 'page1',

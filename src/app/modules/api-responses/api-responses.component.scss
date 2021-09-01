@@ -1,5 +1,28 @@
-.datatable-header-inner {
-  padding: 8px;
-  max-width: 100% !important;
-  background-color:#385269ee ;
+
+
+@import ".../../../../../agmVariables.scss";
+.table{
+
+  thead{
+    background-color: #f1f5f9;
+  }
+
+  tfoot{
+    .total-amount{
+      font-size: 14px;
+    }
+    .pagination-items{
+      font-size: 18px;
+    }
+  }
+
+  span.material-icons-outlined{
+    vertical-align: -6px;
+    cursor: pointer;
+
+    &:hover{
+      color:$primaryColor;
+    }
+  }
+
 }

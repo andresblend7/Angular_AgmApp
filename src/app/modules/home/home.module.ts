@@ -18,6 +18,8 @@ import { SharedModule } from '@app/shared/shared.module';
 
 
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
 
@@ -37,7 +39,8 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
     NgbModule,
     SidebarModule.forRoot(),
     BreadcrumbModule,
-    NgxDatatableModule
+    NgxDatatableModule,
+    FormsModule
     ]
 })
 export class HomeModule { }

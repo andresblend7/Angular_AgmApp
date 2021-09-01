@@ -1,6 +1,92 @@
+<div class="row">
+  <h4 class="agm-page-tittle">Api Data Requests</h4>
+</div>
+<div class="row agm-box p-1 pb-3 pt-5">
+  <div class="col-12">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th style="width:2%" scope="col">#</th>
+            <th style="width:60%" scope="col">Nombres</th>
+            <th style="width:30%" scope="col">Rol</th>
+            <th style="width:8%" scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of pagesItems$ | async; index as idx;">
+            <th scope="row">{{idx + 1}}</th>
+            <td>{{row.name}}</td>
+            <td>{{row.gender}}</td>
+            <td>{{row.company}}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="pt-4" colspan="4">
 
-<section class="page">
+                <div class="d-flex flex-row bd-highlight">
+                  <div class="p-2 flex-fill bd-highlight total-amount">
+                    <i>Total: <b>{{rows.length}}</b></i>
+                  </div>
 
+
+                  <select name="" class="select-agm mt-1" (change)="getRowsToView()" [(ngModel)]="amountTake" id="">
+                    <option value="5">5 / Página </option>
+                    <option value="10">10 / Página</option>
+                    <option value="20">20 / Página</option>
+                   </select>
+
+                  <div class="p-2 pr-3 bd-highlight text-center pagination-items">
+                   <span class="pagination-table">
+
+                    <span class="material-icons-outlined" (click)="prevPage()">
+                      chevron_left
+                      </span>
+
+                    <span class="pagination-numbers">
+                      {{actualPage}} - {{ getCountPages()}}
+                     </span>
+
+                     <span class="material-icons-outlined" (click)="nextPage()">
+                      chevron_right
+                      </span>
+                   </span>
+
+
+                    <!-- <nav aria-label="Page navigation example">
+                      <ul class="pagination">
+                        <li class="page-item">
+                          <a class="page-link" href="javascript:void(0)" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                        </li>
+
+                        <li *ngFor="let pag of getCountPages(); index as pg" class="page-item">
+                          <a class="page-link" href="javascript:void(0)">{{pg+1}}</a>
+                        </li>
+
+                        <li class="page-item">
+                          <a class="page-link" href="javascript:void(0)" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav> -->
+
+                  </div>
+                </div>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</div>
+
+ <!-- <section class="page">
   <div class="row">
     <h4 class="agm-page-tittle">
       Api Data Requests
@@ -14,7 +100,7 @@
       [headerHeight]="60"
       [footerHeight]="60"
       rowHeight="auto"
-      [limit]="13"
+      [limit]="4"
       [rows]="rows" >
 
       <ngx-datatable-column name="Nombre" prop="name" >
@@ -40,4 +126,4 @@
     </ngx-datatable>
     </div>
   </div>
-</section>
+</section> -->
