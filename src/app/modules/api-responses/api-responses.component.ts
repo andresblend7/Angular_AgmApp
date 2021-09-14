@@ -13,9 +13,9 @@ export class ApiResponsesComponent implements OnInit {
     { name: 'Loading...', gender: 'Loading...', company: 'Loading...' },
   ]);
 
-  sliceIndex = 0;
-  amountTake = 5;
-  actualPage = 1;
+  sliceIndex:number = 0;
+  amountTake:number = 5;
+  actualPage:number = 1;
   maxPages=1;
   constructor(private _usrRolSv: ApiRolesService) {}
 
@@ -36,10 +36,17 @@ export class ApiResponsesComponent implements OnInit {
   columns = [{ prop: 'name' }, { name: 'Gender' }, { name: 'Company' }];
 
   getRowsToView() {
+    console.log(this.sliceIndex+" ♣ "+(this.sliceIndex + parseInt(""+this.amountTake)));
 
     this.pagesItems$.next(
-      this.rows.slice(this.sliceIndex, this.sliceIndex + this.amountTake)
+      this.rows.slice(this.sliceIndex, this.sliceIndex + parseInt(""+this.amountTake))
     );
+  }
+
+  listenChangePageItems(){
+    this.sliceIndex=0;
+    this.actualPage=1;
+    this.getRowsToView();
   }
 
   getCountPages(): number {
@@ -51,15 +58,17 @@ export class ApiResponsesComponent implements OnInit {
 
   nextPage() {
    if(this.actualPage<this.maxPages){
-    this.sliceIndex += this.amountTake;
+     console.log(this.sliceIndex+" - "+this.amountTake);
+    this.sliceIndex += parseInt(""+this.amountTake);
     this.actualPage++;
+    console.log(this.sliceIndex+" * "+this.amountTake);
     this.getRowsToView();
    }
   }
 
   prevPage() {
     if (this.actualPage > 1) {
-      this.sliceIndex -= this.amountTake;
+      this.sliceIndex -= parseInt(""+this.amountTake);
       this.actualPage--;
       this.getRowsToView();
     }
